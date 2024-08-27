@@ -26,6 +26,8 @@ import { UserFindUniqueArgs } from "./UserFindUniqueArgs";
 import { CreateUserArgs } from "./CreateUserArgs";
 import { UpdateUserArgs } from "./UpdateUserArgs";
 import { DeleteUserArgs } from "./DeleteUserArgs";
+import { StorymakerInput } from "../StorymakerInput";
+import { StorymakerOutput } from "../StorymakerOutput";
 import { UserService } from "../user.service";
 @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
 @graphql.Resolver(() => User)
@@ -130,5 +132,13 @@ export class UserResolverBase {
       }
       throw error;
     }
+  }
+
+  @graphql.Mutation(() => StorymakerOutput)
+  async Storymaker(
+    @graphql.Args()
+    args: StorymakerInput
+  ): Promise<StorymakerOutput> {
+    return this.service.Storymaker(args);
   }
 }

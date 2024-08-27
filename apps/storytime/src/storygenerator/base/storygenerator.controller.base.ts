@@ -183,4 +183,21 @@ export class StorygeneratorControllerBase {
       throw error;
     }
   }
+
+  @common.Get("/:id/inpur")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async Inpur(
+    @common.Body()
+    body: string
+  ): Promise<string> {
+    return this.service.Inpur(body);
+  }
 }

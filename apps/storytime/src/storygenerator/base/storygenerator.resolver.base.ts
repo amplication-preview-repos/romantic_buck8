@@ -97,4 +97,12 @@ export class StorygeneratorResolverBase {
       throw error;
     }
   }
+
+  @graphql.Query(() => String)
+  async Inpur(
+    @graphql.Args("args")
+    args: string
+  ): Promise<string> {
+    return this.service.Inpur(args);
+  }
 }

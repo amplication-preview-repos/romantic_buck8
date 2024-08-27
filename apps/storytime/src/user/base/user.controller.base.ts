@@ -26,6 +26,8 @@ import { User } from "./User";
 import { UserFindManyArgs } from "./UserFindManyArgs";
 import { UserWhereUniqueInput } from "./UserWhereUniqueInput";
 import { UserUpdateInput } from "./UserUpdateInput";
+import { StorymakerInput } from "../StorymakerInput";
+import { StorymakerOutput } from "../StorymakerOutput";
 
 @swagger.ApiBearerAuth()
 @common.UseGuards(defaultAuthGuard.DefaultAuthGuard, nestAccessControl.ACGuard)
@@ -203,5 +205,22 @@ export class UserControllerBase {
       }
       throw error;
     }
+  }
+
+  @common.Post("/storymaker")
+  @swagger.ApiOkResponse({
+    type: StorymakerOutput,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async Storymaker(
+    @common.Body()
+    body: StorymakerInput
+  ): Promise<StorymakerOutput> {
+    return this.service.Storymaker(body);
   }
 }

@@ -46,4 +46,7 @@ export class StorygeneratorServiceBase {
   ): Promise<PrismaStorygenerator> {
     return this.prisma.storygenerator.delete(args);
   }
+  async Inpur(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
 }

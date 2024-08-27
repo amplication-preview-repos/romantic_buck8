@@ -13,10 +13,13 @@ import { PrismaService } from "../../prisma/prisma.service";
 import { Prisma, User as PrismaUser } from "@prisma/client";
 import { PasswordService } from "../../auth/password.service";
 import { transformStringFieldUpdateInput } from "../../prisma.util";
+import { StorymakerInput } from "../StorymakerInput";
+import { StorymakerOutput } from "../StorymakerOutput";
 
 export class UserServiceBase {
   constructor(
     protected readonly prisma: PrismaService,
+    protected readonly passwordService: PasswordService,
     protected readonly passwordService: PasswordService
   ) {}
 
@@ -58,5 +61,8 @@ export class UserServiceBase {
   }
   async deleteUser(args: Prisma.UserDeleteArgs): Promise<PrismaUser> {
     return this.prisma.user.delete(args);
+  }
+  async Storymaker(args: StorymakerInput): Promise<StorymakerOutput> {
+    throw new Error("Not implemented");
   }
 }
