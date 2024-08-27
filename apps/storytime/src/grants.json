@@ -1,0 +1,122 @@
+[
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Storygenerator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Storygenerator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Storygenerator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Storygenerator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Storygenerator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Storygenerator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Storygenerator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Storygenerator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Storygenerator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Storygenerator",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]
