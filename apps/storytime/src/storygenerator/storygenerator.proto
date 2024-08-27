@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package storygenerator;
+service StorygeneratorService {
+ rpc createStorygenerator (StorygeneratorCreateInput) returns (Storygenerator) {}
+rpc storygenerators (findManyParams) returns (stream Storygenerator) {}
+rpc storygenerator (StorygeneratorWhereUniqueInput) returns (Storygenerator) {}
+rpc updateStorygenerator (StorygeneratorUpdateInput) returns (Storygenerator) {}
+rpc deleteStorygenerator (StorygeneratorWhereUniqueInput) returns (Storygenerator) {} 
+ }
+message StorygeneratorCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Storygenerator {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message StorygeneratorWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message StorygeneratorUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};
